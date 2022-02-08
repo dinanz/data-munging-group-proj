@@ -6,9 +6,12 @@ clean = open("clean_data.csv", "w")
 
 gotHeaders = False
 
+# loop through lines in raw text
 for line in raw:
     curLine = line.rstrip().split()
     if len(curLine) != 0:
+
+        # get headers
         if curLine[0] == "Year" and gotHeaders == False:
             for i in range(0, len(curLine)-2):
                 clean.write(curLine[i])
@@ -16,24 +19,23 @@ for line in raw:
             clean.write(curLine[-2])
             clean.write("\n")
             gotHeaders = True
+
+        # if line of data
         if curLine[0].isnumeric():
             clean.write(curLine[0])
             clean.write(",")
             for i in range(1, len(curLine)-2):
-                #print(curLine[i])
-                if curLine[i].isnumeric() or (curLine[i][0] == "-" and curLine[i][1:].isnumeric()):
+                if curLine[i][0] != "*":
                     num = float(curLine[i])
-                    num = (num/100*1.8)
-                    num = format(num, ".1f")
-                    clean.write(num)
+                    clean.write(format(num/100*1.8, ".1f"))
                 else:
-                    clean.write(curLine[i])
+                    # for missing values, subsitute 0 for now
+                    clean.write("0")
                 clean.write(",")
             if curLine[-2][0] != "*":
                 num = float(curLine[-2])
-                num = (num/100*1.8)
-                num = format(num, ".1f")
-                clean.write(num)
+                clean.write(format(num/100*1.8, ".1f"))
+
             clean.write("\n")
 
 
