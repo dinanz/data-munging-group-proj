@@ -2,7 +2,7 @@
 
 raw = open("data/raw_data.txt", "r")
 
-clean = open("clean_data.csv", "w")
+clean = open("data/clean_data.csv", "w")
 
 gotHeaders = False
 

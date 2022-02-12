@@ -12,6 +12,6 @@ The cleaning of the raw data is fairly simple: the program takes in the raw data
 This is also a simple program: reading the 120 data points for each month every decade and calculating the average of those 120 data points will yield the most accurate results. The program will, for each decade, read and calculate the sum of those 120 data points, then divide it by 120 to get the average temperature fluctuation within the decade, and then print those averages to an output text file.
 
 ## Input/output files
-Raw data: [data/raw_data.txt]()
-Cleaned up data in csv: [data/clean_data.csv]
-Analysis results in text file: [analysis_results.txt]
+Raw data: [data/raw_data.txt](https://github.com/dinanz/data-munging-group-proj/blob/master/data/raw_data.txt)<br>
+Cleaned up data in csv: [data/clean_data.csv](https://github.com/dinanz/data-munging-group-proj/blob/master/data/clean_data.csv)<br>
+Analysis results in text file: [analysis_results.txt]()
