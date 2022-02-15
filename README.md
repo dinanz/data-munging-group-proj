@@ -1,7 +1,7 @@
 # Raw Data Munging
 
 ## Group members
-Jovi Koh (jlk668)
+Jovi Koh (jlk668) <br>
 John <br>
 Diana Zhao (dz1371)
 
